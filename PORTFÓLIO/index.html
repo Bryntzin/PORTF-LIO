@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico do Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>kanbam</h1>
+
+<div class="main-container">
+    <!-- Controles de Navegação -->
+    <div class="controls">
+        <button id="prevBtn" onclick="mudarEtapa(-1)">◀ Anterior</button>
+        <div class="step-indicator">
+            Etapa <span id="currentStep">1</span> de 8
+        </div>
+        <button id="nextBtn" onclick="mudarEtapa(1)">Próximo ▶</button>
+    </div>
+
+    <!-- Tabuleiro Kanban -->
+    <div class="kanban-board">
+        <div class="board-header">
+            <span class="team-name">Grupo: FEMINICÍDIO-ZERO</span>
+            <h1>Kanban Board</h1>
+        </div>
+
+        <div class="columns-container">
+            <!-- Coluna Para Fazer -->
+            <div class="kanban-column col-todo">
+                <h2>Para Fazer</h2>
+                <div class="cards-space" id="todo-cards"></div>
+            </div>
+
+            <!-- Coluna Em Progresso -->
+            <div class="kanban-column col-progress">
+                <h2>Em progresso</h2>
+                <div class="cards-space" id="progress-cards"></div>
+            </div>
+
+            <!-- Coluna Em Revisão -->
+            <div class="kanban-column col-review">
+                <h2>Em revisão</h2>
+                <div class="cards-space" id="review-cards"></div>
+            </div>
+
+            <!-- Coluna Completo -->
+            <div class="kanban-column col-done">
+                <h2>Completo</h2>
+                <div class="cards-space" id="done-cards"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
